@@ -84,6 +84,9 @@ class ImageGenerator:
             if max_devider == None and len(images_list) > 7:
                 raise Exception(
                     'Изображение будет не эстетичным, добавьте пожалуйста еще изображений')
+            
+            if max_devider == None:
+                max_devider = len(images_list)
 
             chunked_list_images = Utils.split_list_into_fixed_chunks(
                 images_list, max_devider)
